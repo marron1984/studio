@@ -1,6 +1,7 @@
 import React from "react";
 import { Composition } from "remotion";
 import { RestaurantMenuReel } from "./compositions/RestaurantMenuReel";
+import { OdenStandReel } from "./compositions/OdenStandReel";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -9,6 +10,14 @@ export const RemotionRoot: React.FC = () => {
         id="RestaurantMenuReel"
         component={RestaurantMenuReel}
         durationInFrames={900}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="OdenStandReel"
+        component={OdenStandReel}
+        durationInFrames={570}
         fps={30}
         width={1080}
         height={1920}
