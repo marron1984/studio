@@ -74,15 +74,37 @@ const OpeningScene: React.FC = () => {
         );
       })}
 
-      {/* 二月の献立 text */}
+      {/* Content */}
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: 30,
+          gap: 24,
         }}
       >
+        {/* 祥瑞グループ */}
+        <div
+          style={{
+            fontSize: 28,
+            color: "rgba(255,255,255,0.5)",
+            fontFamily,
+            fontWeight: 400,
+            letterSpacing: 8,
+            opacity: interpolate(frame, [8, 28], [0, 1], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            }),
+            transform: `translateY(${interpolate(frame, [8, 28], [20, 0], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            })}px)`,
+          }}
+        >
+          祥瑞グループ
+        </div>
+
+        {/* 二月の懐石 */}
         <div
           style={{
             fontSize: 34,
@@ -90,17 +112,17 @@ const OpeningScene: React.FC = () => {
             fontFamily,
             fontWeight: 400,
             letterSpacing: 14,
-            opacity: interpolate(frame, [15, 35], [0, 1], {
+            opacity: interpolate(frame, [18, 38], [0, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
             }),
-            transform: `translateY(${interpolate(frame, [15, 35], [25, 0], {
+            transform: `translateY(${interpolate(frame, [18, 38], [25, 0], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
             })}px)`,
           }}
         >
-          二月の献立
+          二月の懐石
         </div>
 
         {/* Gold decorative line */}
@@ -110,7 +132,7 @@ const OpeningScene: React.FC = () => {
             height: 1,
             background:
               "linear-gradient(90deg, transparent, #c4a265, transparent)",
-            transform: `scaleX(${interpolate(frame, [30, 55], [0, 1], {
+            transform: `scaleX(${interpolate(frame, [33, 55], [0, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
             })})`,
@@ -135,7 +157,7 @@ const OpeningScene: React.FC = () => {
             })}px)`,
           }}
         >
-          花緑青
+          宗伝唐茶
         </div>
 
         <div
@@ -155,7 +177,7 @@ const OpeningScene: React.FC = () => {
             })}px)`,
           }}
         >
-          はなろくしょう コース
+          so denkaracha コース
         </div>
 
         {/* Price */}
@@ -177,7 +199,7 @@ const OpeningScene: React.FC = () => {
             })}px)`,
           }}
         >
-          ¥9,800
+          ¥12,800
         </div>
       </div>
     </AbsoluteFill>
@@ -405,7 +427,7 @@ const ClosingScene: React.FC = () => {
             })}px)`,
           }}
         >
-          花緑青コース
+          宗伝唐茶コース
         </div>
 
         <div
@@ -425,7 +447,7 @@ const ClosingScene: React.FC = () => {
             })}px)`,
           }}
         >
-          二月の献立　全七品
+          二月の懐石　全八品
         </div>
 
         {/* Bottom decorative line */}
@@ -461,7 +483,7 @@ const ClosingScene: React.FC = () => {
             })}px)`,
           }}
         >
-          ¥9,800
+          ¥12,800
         </div>
 
         <div
@@ -661,61 +683,72 @@ export const RestaurantMenuReel: React.FC = () => {
         />
       </Sequence>
 
-      {/* Scene 3: 造里 - Sashimi (frames 200-305) */}
+      {/* Scene 3: 椀物 - Soup (frames 200-305) */}
       <Sequence from={200} durationInFrames={105}>
         <DishSlide
           imageSrc="dish2.jpg"
-          categoryJa="造　里"
+          categoryJa="椀　物"
           descriptionLines={[
-            "鰤焼霜　鮪",
-            "若布醤油　平貝",
-            "酢味噌",
+            "清汁仕立て　焼甘鯛",
+            "筍　木の芽",
           ]}
         />
       </Sequence>
 
-      {/* Scene 4: 焼物 - Grilled (frames 295-400) */}
+      {/* Scene 4: 造里 - Sashimi (frames 295-400) */}
       <Sequence from={295} durationInFrames={105}>
         <DishSlide
           imageSrc="dish3.jpg"
-          categoryJa="焼　物"
+          categoryJa="造　里"
           descriptionLines={[
-            "猪肉のつみれ焼",
-            "筍　山椒ソース",
+            "～鮮魚四種盛～",
+            "本鮪　鰤　平貝　鯛",
+            "造里醤油　あしらい",
           ]}
         />
       </Sequence>
 
-      {/* Scene 5: 揚物 - Fried (frames 390-495) */}
+      {/* Scene 5: 焼物 - Grilled (frames 390-495) */}
       <Sequence from={390} durationInFrames={105}>
         <DishSlide
           imageSrc="dish4.jpg"
-          categoryJa="揚　物"
+          categoryJa="焼　物"
           descriptionLines={[
-            "河豚唐揚げ",
-            "筍コロッケ",
-            "レモン　青唐",
+            "ズワイガニステーキ",
+            "筍バター醤油焼　菜の花",
           ]}
         />
       </Sequence>
 
-      {/* Scene 6: 温物 - Warm dish (frames 485-590) */}
+      {/* Scene 6: 蓋物 - Covered dish (frames 485-590) */}
       <Sequence from={485} durationInFrames={105}>
         <DishSlide
           imageSrc="dish5.jpg"
-          categoryJa="温　物"
+          categoryJa="蓋　物"
           descriptionLines={[
-            "焼雲子米煮",
-            "菜の花　姫人参",
-            "胡桃　パルミジャーノ",
+            "海老芋旨煮",
+            "振り柚子　一寸豆",
           ]}
         />
       </Sequence>
 
-      {/* Scene 7: 甘味 - Dessert (frames 580-685) */}
+      {/* Scene 7: 温物 - Hot pot (frames 580-685) */}
       <Sequence from={580} durationInFrames={105}>
         <DishSlide
           imageSrc="dish6.jpg"
+          categoryJa="温　物"
+          descriptionLines={[
+            "黒毛和牛サーロイン味噌小鍋",
+            "岩津葱　玉葱",
+            "糸こんにゃく　焼豆腐",
+          ]}
+        />
+      </Sequence>
+
+      {/* Scene 8: 甘味 - Dessert (frames 675-780) */}
+      <Sequence from={675} durationInFrames={105}>
+        <DishSlide
+          imageSrc="dish7.jpg"
           categoryJa="甘　味"
           descriptionLines={["ショコラブリュレ"]}
         />
@@ -726,8 +759,8 @@ export const RestaurantMenuReel: React.FC = () => {
         so it's included in the closing scene context
       */}
 
-      {/* Scene 8: Closing (frames 680-900) */}
-      <Sequence from={680} durationInFrames={220}>
+      {/* Scene 9: Closing (frames 770-990) */}
+      <Sequence from={770} durationInFrames={220}>
         <ClosingScene />
       </Sequence>
     </AbsoluteFill>
