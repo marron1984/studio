@@ -548,7 +548,7 @@ const ClosingScene: React.FC = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: 36,
+            gap: 44,
             opacity: interpolate(frame, [70, 95], [0, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
@@ -565,27 +565,27 @@ const ClosingScene: React.FC = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              gap: 6,
+              gap: 10,
             }}
           >
             <div
               style={{
-                fontSize: 26,
+                fontSize: 34,
                 color: "#c4a265",
                 fontFamily,
                 fontWeight: 700,
-                letterSpacing: 6,
+                letterSpacing: 8,
               }}
             >
               禅園 西梅田店
             </div>
             <div
               style={{
-                fontSize: 18,
-                color: "rgba(255,255,255,0.55)",
+                fontSize: 24,
+                color: "rgba(255,255,255,0.7)",
                 fontFamily,
                 fontWeight: 400,
-                letterSpacing: 1,
+                letterSpacing: 2,
                 lineHeight: 1.8,
                 textAlign: "center",
               }}
@@ -596,11 +596,11 @@ const ClosingScene: React.FC = () => {
             </div>
             <div
               style={{
-                fontSize: 20,
-                color: "rgba(255,255,255,0.65)",
+                fontSize: 28,
+                color: "rgba(255,255,255,0.85)",
                 fontFamily,
                 fontWeight: 400,
-                letterSpacing: 2,
+                letterSpacing: 3,
               }}
             >
               TEL 06-6457-1002
@@ -613,27 +613,27 @@ const ClosingScene: React.FC = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              gap: 6,
+              gap: 10,
             }}
           >
             <div
               style={{
-                fontSize: 26,
+                fontSize: 34,
                 color: "#c4a265",
                 fontFamily,
                 fontWeight: 700,
-                letterSpacing: 6,
+                letterSpacing: 8,
               }}
             >
               禅園 心斎橋店
             </div>
             <div
               style={{
-                fontSize: 18,
-                color: "rgba(255,255,255,0.55)",
+                fontSize: 24,
+                color: "rgba(255,255,255,0.7)",
                 fontFamily,
                 fontWeight: 400,
-                letterSpacing: 1,
+                letterSpacing: 2,
                 lineHeight: 1.8,
                 textAlign: "center",
               }}
@@ -644,11 +644,11 @@ const ClosingScene: React.FC = () => {
             </div>
             <div
               style={{
-                fontSize: 20,
-                color: "rgba(255,255,255,0.65)",
+                fontSize: 28,
+                color: "rgba(255,255,255,0.85)",
                 fontFamily,
                 fontWeight: 400,
-                letterSpacing: 2,
+                letterSpacing: 3,
               }}
             >
               TEL 06-6241-7027
