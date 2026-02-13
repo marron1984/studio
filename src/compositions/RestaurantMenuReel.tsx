@@ -483,11 +483,11 @@ const ClosingScene: React.FC = () => {
         {/* CTA */}
         <div
           style={{
-            marginTop: 60,
+            marginTop: 40,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: 16,
+            gap: 12,
             opacity: interpolate(frame, [45, 65], [0, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
@@ -516,6 +516,121 @@ const ClosingScene: React.FC = () => {
             }}
           >
             ご予約承り中
+          </div>
+        </div>
+
+        {/* Store info */}
+        <div
+          style={{
+            marginTop: 50,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 36,
+            opacity: interpolate(frame, [70, 95], [0, 1], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            }),
+            transform: `translateY(${interpolate(frame, [70, 95], [20, 0], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            })}px)`,
+          }}
+        >
+          {/* 西梅田店 */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 6,
+            }}
+          >
+            <div
+              style={{
+                fontSize: 26,
+                color: "#c4a265",
+                fontFamily,
+                fontWeight: 700,
+                letterSpacing: 6,
+              }}
+            >
+              禅園 西梅田店
+            </div>
+            <div
+              style={{
+                fontSize: 18,
+                color: "rgba(255,255,255,0.55)",
+                fontFamily,
+                fontWeight: 400,
+                letterSpacing: 1,
+                lineHeight: 1.8,
+                textAlign: "center",
+              }}
+            >
+              大阪市北区梅田2-5-25
+              <br />
+              ハービスPLAZA B2F
+            </div>
+            <div
+              style={{
+                fontSize: 20,
+                color: "rgba(255,255,255,0.65)",
+                fontFamily,
+                fontWeight: 400,
+                letterSpacing: 2,
+              }}
+            >
+              TEL 06-6457-1002
+            </div>
+          </div>
+
+          {/* 心斎橋店 */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 6,
+            }}
+          >
+            <div
+              style={{
+                fontSize: 26,
+                color: "#c4a265",
+                fontFamily,
+                fontWeight: 700,
+                letterSpacing: 6,
+              }}
+            >
+              禅園 心斎橋店
+            </div>
+            <div
+              style={{
+                fontSize: 18,
+                color: "rgba(255,255,255,0.55)",
+                fontFamily,
+                fontWeight: 400,
+                letterSpacing: 1,
+                lineHeight: 1.8,
+                textAlign: "center",
+              }}
+            >
+              大阪市中央区西心斎橋1-3-3
+              <br />
+              ホテル日航ビルB2F
+            </div>
+            <div
+              style={{
+                fontSize: 20,
+                color: "rgba(255,255,255,0.65)",
+                fontFamily,
+                fontWeight: 400,
+                letterSpacing: 2,
+              }}
+            >
+              TEL 06-6241-7027
+            </div>
           </div>
         </div>
       </div>
