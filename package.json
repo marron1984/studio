@@ -1,0 +1,26 @@
+{
+  "name": "studio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx remotion studio src/index.ts",
+    "build": "npx remotion render src/index.ts RestaurantMenuReel out/restaurant-menu-reel.mp4",
+    "render": "npx remotion render src/index.ts RestaurantMenuReel out/restaurant-menu-reel.mp4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:19300/git/marron1984/studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/cli": "^4.0.421",
+    "@remotion/google-fonts": "^4.0.421",
+    "@remotion/transitions": "^4.0.421",
+    "@types/react": "^19.2.14",
+    "remotion": "^4.0.421",
+    "typescript": "^5.9.3"
+  }
+}
