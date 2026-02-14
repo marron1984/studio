@@ -260,7 +260,7 @@ const ClosingScene: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: warmBrown }}>
       <div style={{ position: "absolute", inset: 0, opacity: fadeIn }}>
-        <KenBurns src="auberge/img16.jpg" move="panLeft" speed={0.04} />
+        <KenBurns src="auberge/img30.jpg" move="zoomIn" speed={0.04} />
       </div>
       <Overlay style="bottom" opacity={0.55} />
       <Overlay style="top" opacity={0.3} />
@@ -404,11 +404,11 @@ export const AubergeOtaReel: React.FC = () => {
 
       {/* === TOURIST SECTION (~4s) === */}
 
-      {/* Scene 9: Nearby - Deer (630-690, 2s) */}
+      {/* Scene 9: Nearby - Autumn scenery (630-690, 2s) */}
       <Sequence from={630} durationInFrames={60}>
         <PhotoSlide
-          src="auberge/img30.jpg"
-          move="zoomOut"
+          src="auberge/img16.jpg"
+          move="panLeft"
           durationFrames={60}
         />
       </Sequence>
