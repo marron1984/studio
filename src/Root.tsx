@@ -4,6 +4,7 @@ import { RestaurantMenuReel } from "./compositions/RestaurantMenuReel";
 import { OdenStandReel } from "./compositions/OdenStandReel";
 import { YakinikuArataReel } from "./compositions/YakinikuArataReel";
 import { AubergeRecruitReel } from "./compositions/AubergeRecruitReel";
+import { AubergeSceneryReel } from "./compositions/AubergeSceneryReel";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -36,6 +37,14 @@ export const RemotionRoot: React.FC = () => {
         id="AubergeRecruitReel"
         component={AubergeRecruitReel}
         durationInFrames={1290}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="AubergeSceneryReel"
+        component={AubergeSceneryReel}
+        durationInFrames={1080}
         fps={30}
         width={1080}
         height={1920}
