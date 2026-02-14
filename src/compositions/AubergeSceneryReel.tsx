@@ -155,22 +155,22 @@ const DeerScene: React.FC = () => {
         }}
       >
         <SoftText frame={frame} delay={20} style={{
-          fontSize: 42,
+          fontSize: 58,
           color: "#fff",
           fontFamily: serifFont,
           fontWeight: 600,
           letterSpacing: 8,
-          textShadow: "0 2px 20px rgba(0,0,0,0.5)",
+          textShadow: "0 3px 24px rgba(0,0,0,0.6)",
         }}>
           ようこそ、鹿のやへ
         </SoftText>
         <SoftText frame={frame} delay={40} style={{
-          fontSize: 20,
-          color: "rgba(255,255,255,0.6)",
+          fontSize: 30,
+          color: "rgba(255,255,255,0.7)",
           fontFamily: sansFont,
-          fontWeight: 300,
+          fontWeight: 400,
           letterSpacing: 4,
-          textShadow: "0 1px 10px rgba(0,0,0,0.5)",
+          textShadow: "0 2px 12px rgba(0,0,0,0.5)",
         }}>
           奈良公園に佇むオーベルジュ
         </SoftText>
@@ -201,32 +201,32 @@ const AutumnScene: React.FC = () => {
         }}
       >
         <SoftText frame={frame} delay={15} style={{
-          fontSize: 18,
+          fontSize: 28,
           color: warmGold,
           fontFamily: sansFont,
           letterSpacing: 6,
           fontWeight: 400,
-          textShadow: "0 1px 8px rgba(0,0,0,0.4)",
+          textShadow: "0 2px 10px rgba(0,0,0,0.5)",
         }}>
           AUTUMN IN NARA
         </SoftText>
         <SoftText frame={frame} delay={25} style={{
-          fontSize: 38,
+          fontSize: 52,
           color: "#fff",
           fontFamily: serifFont,
           fontWeight: 600,
           letterSpacing: 6,
-          textShadow: "0 2px 16px rgba(0,0,0,0.5)",
+          textShadow: "0 3px 20px rgba(0,0,0,0.6)",
         }}>
           紅葉の参道を歩けば
         </SoftText>
         <SoftText frame={frame} delay={40} style={{
-          fontSize: 24,
-          color: "rgba(255,255,255,0.6)",
+          fontSize: 34,
+          color: "rgba(255,255,255,0.7)",
           fontFamily: serifFont,
           fontWeight: 400,
           letterSpacing: 3,
-          textShadow: "0 1px 10px rgba(0,0,0,0.5)",
+          textShadow: "0 2px 12px rgba(0,0,0,0.5)",
         }}>
           鹿がそっと出迎えてくれます
         </SoftText>
@@ -265,22 +265,22 @@ const EntranceScene: React.FC = () => {
         }}
       >
         <SoftText frame={frame} delay={15} style={{
-          fontSize: 48,
+          fontSize: 64,
           color: "#fff",
           fontFamily: serifFont,
           fontWeight: 700,
           letterSpacing: 10,
-          textShadow: "0 2px 20px rgba(0,0,0,0.6)",
+          textShadow: "0 3px 24px rgba(0,0,0,0.6)",
         }}>
           鹿のや
         </SoftText>
         <SoftText frame={frame} delay={30} style={{
-          fontSize: 20,
-          color: "rgba(255,255,255,0.55)",
+          fontSize: 28,
+          color: "rgba(255,255,255,0.6)",
           fontFamily: sansFont,
           fontWeight: 300,
           letterSpacing: 6,
-          textShadow: "0 1px 8px rgba(0,0,0,0.4)",
+          textShadow: "0 2px 10px rgba(0,0,0,0.5)",
         }}>
           L&apos;ARTISAN KANOYA
         </SoftText>
@@ -319,32 +319,32 @@ const GardenScene: React.FC = () => {
         }}
       >
         <SoftText frame={frame} delay={15} style={{
-          fontSize: 18,
+          fontSize: 28,
           color: warmGold,
           fontFamily: sansFont,
           letterSpacing: 6,
           fontWeight: 400,
-          textShadow: "0 1px 8px rgba(0,0,0,0.4)",
+          textShadow: "0 2px 10px rgba(0,0,0,0.5)",
         }}>
           JAPANESE GARDEN
         </SoftText>
         <SoftText frame={frame} delay={25} style={{
-          fontSize: 36,
+          fontSize: 52,
           color: "#fff",
           fontFamily: serifFont,
           fontWeight: 600,
           letterSpacing: 6,
-          textShadow: "0 2px 16px rgba(0,0,0,0.5)",
+          textShadow: "0 3px 20px rgba(0,0,0,0.6)",
         }}>
           四季の移ろいを感じて
         </SoftText>
         <SoftText frame={frame} delay={40} style={{
-          fontSize: 22,
-          color: "rgba(255,255,255,0.55)",
+          fontSize: 32,
+          color: "rgba(255,255,255,0.7)",
           fontFamily: serifFont,
           fontWeight: 400,
           letterSpacing: 2,
-          textShadow: "0 1px 10px rgba(0,0,0,0.5)",
+          textShadow: "0 2px 12px rgba(0,0,0,0.5)",
         }}>
           竹垣の庭と障子越しの緑
         </SoftText>
@@ -383,22 +383,22 @@ const InteriorScene: React.FC = () => {
         }}
       >
         <SoftText frame={frame} delay={15} style={{
-          fontSize: 18,
+          fontSize: 28,
           color: warmGold,
           fontFamily: sansFont,
           letterSpacing: 6,
           fontWeight: 400,
-          textShadow: "0 1px 8px rgba(0,0,0,0.4)",
+          textShadow: "0 2px 10px rgba(0,0,0,0.5)",
         }}>
           INTERIOR
         </SoftText>
         <SoftText frame={frame} delay={25} style={{
-          fontSize: 36,
+          fontSize: 52,
           color: "#fff",
           fontFamily: serifFont,
           fontWeight: 600,
           letterSpacing: 6,
-          textShadow: "0 2px 16px rgba(0,0,0,0.5)",
+          textShadow: "0 3px 20px rgba(0,0,0,0.6)",
         }}>
           温もりに満ちた空間
         </SoftText>
@@ -437,32 +437,32 @@ const DiningViewScene: React.FC = () => {
         }}
       >
         <SoftText frame={frame} delay={15} style={{
-          fontSize: 18,
+          fontSize: 28,
           color: warmGold,
           fontFamily: sansFont,
           letterSpacing: 6,
           fontWeight: 400,
-          textShadow: "0 1px 8px rgba(0,0,0,0.4)",
+          textShadow: "0 2px 10px rgba(0,0,0,0.5)",
         }}>
           DINING
         </SoftText>
         <SoftText frame={frame} delay={25} style={{
-          fontSize: 36,
+          fontSize: 52,
           color: "#fff",
           fontFamily: serifFont,
           fontWeight: 600,
           letterSpacing: 6,
-          textShadow: "0 2px 16px rgba(0,0,0,0.5)",
+          textShadow: "0 3px 20px rgba(0,0,0,0.6)",
         }}>
           森を望む食卓
         </SoftText>
         <SoftText frame={frame} delay={40} style={{
-          fontSize: 22,
-          color: "rgba(255,255,255,0.55)",
+          fontSize: 32,
+          color: "rgba(255,255,255,0.7)",
           fontFamily: serifFont,
           fontWeight: 400,
           letterSpacing: 2,
-          textShadow: "0 1px 10px rgba(0,0,0,0.5)",
+          textShadow: "0 2px 12px rgba(0,0,0,0.5)",
         }}>
           窓の向こうに広がる奈良の森
         </SoftText>
@@ -519,22 +519,22 @@ const CuisineMoments: React.FC = () => {
         }}
       >
         <SoftText frame={frame} delay={10} style={{
-          fontSize: 18,
+          fontSize: 28,
           color: warmGold,
           fontFamily: sansFont,
           letterSpacing: 6,
           fontWeight: 400,
-          textShadow: "0 1px 8px rgba(0,0,0,0.4)",
+          textShadow: "0 2px 10px rgba(0,0,0,0.5)",
         }}>
           CUISINE
         </SoftText>
         <SoftText frame={frame} delay={20} style={{
-          fontSize: 36,
+          fontSize: 52,
           color: "#fff",
           fontFamily: serifFont,
           fontWeight: 600,
           letterSpacing: 6,
-          textShadow: "0 2px 16px rgba(0,0,0,0.5)",
+          textShadow: "0 3px 20px rgba(0,0,0,0.6)",
         }}>
           旬を纏う一皿
         </SoftText>
@@ -573,22 +573,22 @@ const RoomScene: React.FC = () => {
         }}
       >
         <SoftText frame={frame} delay={15} style={{
-          fontSize: 18,
+          fontSize: 28,
           color: warmGold,
           fontFamily: sansFont,
           letterSpacing: 6,
           fontWeight: 400,
-          textShadow: "0 1px 8px rgba(0,0,0,0.4)",
+          textShadow: "0 2px 10px rgba(0,0,0,0.5)",
         }}>
           ROOM
         </SoftText>
         <SoftText frame={frame} delay={25} style={{
-          fontSize: 36,
+          fontSize: 52,
           color: "#fff",
           fontFamily: serifFont,
           fontWeight: 600,
           letterSpacing: 6,
-          textShadow: "0 2px 16px rgba(0,0,0,0.5)",
+          textShadow: "0 3px 20px rgba(0,0,0,0.6)",
         }}>
           心やすらぐひととき
         </SoftText>
@@ -628,12 +628,12 @@ const ClosingScene: React.FC = () => {
         }}
       >
         <SoftText frame={frame} delay={20} style={{
-          fontSize: 28,
-          color: "rgba(255,255,255,0.6)",
+          fontSize: 38,
+          color: "rgba(255,255,255,0.7)",
           fontFamily: serifFont,
           fontWeight: 400,
           letterSpacing: 4,
-          textShadow: "0 1px 10px rgba(0,0,0,0.5)",
+          textShadow: "0 2px 12px rgba(0,0,0,0.5)",
         }}>
           また会いに来てください
         </SoftText>
@@ -641,47 +641,47 @@ const ClosingScene: React.FC = () => {
         {/* Thin gold line */}
         <div
           style={{
-            width: interpolate(frame, [35, 60], [0, 100], {
+            width: interpolate(frame, [35, 60], [0, 120], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
             }),
-            height: 1,
+            height: 1.5,
             background: `linear-gradient(90deg, transparent, ${warmGold}, transparent)`,
           }}
         />
 
         <SoftText frame={frame} delay={40} style={{
-          fontSize: 52,
+          fontSize: 72,
           color: "#fff",
           fontFamily: serifFont,
           fontWeight: 700,
           letterSpacing: 10,
-          textShadow: "0 2px 20px rgba(0,0,0,0.5)",
+          textShadow: "0 3px 24px rgba(0,0,0,0.6)",
         }}>
           鹿のや
         </SoftText>
 
         <SoftText frame={frame} delay={55} style={{
-          fontSize: 18,
-          color: "rgba(255,255,255,0.5)",
+          fontSize: 28,
+          color: "rgba(255,255,255,0.6)",
           fontFamily: sansFont,
           fontWeight: 300,
           letterSpacing: 6,
-          textShadow: "0 1px 8px rgba(0,0,0,0.4)",
+          textShadow: "0 2px 10px rgba(0,0,0,0.5)",
         }}>
           L&apos;ARTISAN KANOYA
         </SoftText>
 
         <SoftText frame={frame} delay={70} style={{
           marginTop: 20,
-          fontSize: 17,
-          color: "rgba(255,255,255,0.35)",
+          fontSize: 24,
+          color: "rgba(255,255,255,0.45)",
           fontFamily: sansFont,
           fontWeight: 300,
           letterSpacing: 2,
           textAlign: "center",
           lineHeight: "1.8",
-          textShadow: "0 1px 6px rgba(0,0,0,0.4)",
+          textShadow: "0 2px 8px rgba(0,0,0,0.4)",
         }}>
           奈良市春日野町16 奈良公園内
         </SoftText>

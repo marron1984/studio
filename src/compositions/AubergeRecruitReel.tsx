@@ -155,8 +155,8 @@ const OpeningScene: React.FC = () => {
         {/* Small top label */}
         <div
           style={{
-            fontSize: 22,
-            color: "rgba(255,255,255,0.5)",
+            fontSize: 30,
+            color: "rgba(255,255,255,0.6)",
             fontFamily: sansFamily,
             fontWeight: 300,
             letterSpacing: 8,
@@ -178,7 +178,7 @@ const OpeningScene: React.FC = () => {
         {/* Main title */}
         <div
           style={{
-            fontSize: 72,
+            fontSize: 86,
             color: "#fff",
             fontFamily,
             fontWeight: 700,
@@ -201,8 +201,8 @@ const OpeningScene: React.FC = () => {
         {/* Subtitle */}
         <div
           style={{
-            fontSize: 28,
-            color: "rgba(255,255,255,0.65)",
+            fontSize: 38,
+            color: "rgba(255,255,255,0.7)",
             fontFamily,
             fontWeight: 400,
             letterSpacing: 4,
@@ -267,7 +267,7 @@ const BrandScene: React.FC = () => {
       >
         <div
           style={{
-            fontSize: 24,
+            fontSize: 32,
             color: gold,
             fontFamily: sansFamily,
             fontWeight: 400,
@@ -282,7 +282,7 @@ const BrandScene: React.FC = () => {
         </div>
         <div
           style={{
-            fontSize: 56,
+            fontSize: 70,
             color: "#fff",
             fontFamily,
             fontWeight: 700,
@@ -301,8 +301,8 @@ const BrandScene: React.FC = () => {
         </div>
         <div
           style={{
-            fontSize: 20,
-            color: "rgba(255,255,255,0.55)",
+            fontSize: 28,
+            color: "rgba(255,255,255,0.6)",
             fontFamily: sansFamily,
             fontWeight: 300,
             letterSpacing: 8,
@@ -371,7 +371,7 @@ const DiningScene: React.FC = () => {
       >
         <div
           style={{
-            fontSize: 20,
+            fontSize: 30,
             color: gold,
             fontFamily: sansFamily,
             letterSpacing: 6,
@@ -386,7 +386,7 @@ const DiningScene: React.FC = () => {
         </div>
         <div
           style={{
-            fontSize: 40,
+            fontSize: 54,
             color: "#fff",
             fontFamily,
             fontWeight: 700,
@@ -406,8 +406,8 @@ const DiningScene: React.FC = () => {
         <GoldLine frame={frame} delay={30} width={60} />
         <div
           style={{
-            fontSize: 22,
-            color: "rgba(255,255,255,0.55)",
+            fontSize: 30,
+            color: "rgba(255,255,255,0.65)",
             fontFamily,
             fontWeight: 400,
             letterSpacing: 2,
@@ -479,7 +479,7 @@ const CuisineScene: React.FC = () => {
       >
         <div
           style={{
-            fontSize: 20,
+            fontSize: 30,
             color: gold,
             fontFamily: sansFamily,
             letterSpacing: 6,
@@ -494,7 +494,7 @@ const CuisineScene: React.FC = () => {
         </div>
         <div
           style={{
-            fontSize: 40,
+            fontSize: 54,
             color: "#fff",
             fontFamily,
             fontWeight: 700,
@@ -514,8 +514,8 @@ const CuisineScene: React.FC = () => {
         <GoldLine frame={frame} delay={30} width={60} />
         <div
           style={{
-            fontSize: 22,
-            color: "rgba(255,255,255,0.55)",
+            fontSize: 30,
+            color: "rgba(255,255,255,0.65)",
             fontFamily,
             fontWeight: 400,
             letterSpacing: 2,
@@ -572,7 +572,7 @@ const KitchenScene: React.FC = () => {
       >
         <div
           style={{
-            fontSize: 20,
+            fontSize: 30,
             color: gold,
             fontFamily: sansFamily,
             letterSpacing: 6,
@@ -587,7 +587,7 @@ const KitchenScene: React.FC = () => {
         </div>
         <div
           style={{
-            fontSize: 40,
+            fontSize: 54,
             color: "#fff",
             fontFamily,
             fontWeight: 700,
@@ -607,8 +607,8 @@ const KitchenScene: React.FC = () => {
         <GoldLine frame={frame} delay={30} width={60} />
         <div
           style={{
-            fontSize: 22,
-            color: "rgba(255,255,255,0.55)",
+            fontSize: 30,
+            color: "rgba(255,255,255,0.65)",
             fontFamily,
             fontWeight: 400,
             letterSpacing: 2,
@@ -680,7 +680,7 @@ const AccommodationScene: React.FC = () => {
       >
         <div
           style={{
-            fontSize: 20,
+            fontSize: 30,
             color: gold,
             fontFamily: sansFamily,
             letterSpacing: 6,
@@ -695,7 +695,7 @@ const AccommodationScene: React.FC = () => {
         </div>
         <div
           style={{
-            fontSize: 36,
+            fontSize: 50,
             color: "#fff",
             fontFamily,
             fontWeight: 700,
@@ -715,8 +715,8 @@ const AccommodationScene: React.FC = () => {
         <GoldLine frame={frame} delay={30} width={60} />
         <div
           style={{
-            fontSize: 22,
-            color: "rgba(255,255,255,0.55)",
+            fontSize: 30,
+            color: "rgba(255,255,255,0.65)",
             fontFamily,
             fontWeight: 400,
             letterSpacing: 2,
@@ -783,7 +783,7 @@ const NaraScene: React.FC = () => {
       >
         <div
           style={{
-            fontSize: 20,
+            fontSize: 30,
             color: gold,
             fontFamily: sansFamily,
             letterSpacing: 6,
@@ -798,7 +798,7 @@ const NaraScene: React.FC = () => {
         </div>
         <div
           style={{
-            fontSize: 40,
+            fontSize: 54,
             color: "#fff",
             fontFamily,
             fontWeight: 700,
@@ -818,8 +818,8 @@ const NaraScene: React.FC = () => {
         <GoldLine frame={frame} delay={30} width={60} />
         <div
           style={{
-            fontSize: 22,
-            color: "rgba(255,255,255,0.55)",
+            fontSize: 30,
+            color: "rgba(255,255,255,0.65)",
             fontFamily,
             fontWeight: 400,
             letterSpacing: 2,
@@ -883,7 +883,7 @@ const RecruitScene: React.FC = () => {
 
         <div
           style={{
-            fontSize: 48,
+            fontSize: 62,
             color: "#fff",
             fontFamily,
             fontWeight: 700,
@@ -931,7 +931,7 @@ const RecruitScene: React.FC = () => {
             >
               <div
                 style={{
-                  fontSize: 34,
+                  fontSize: 44,
                   color: "#fff",
                   fontFamily,
                   fontWeight: 600,
@@ -942,8 +942,8 @@ const RecruitScene: React.FC = () => {
               </div>
               <div
                 style={{
-                  fontSize: 20,
-                  color: "rgba(255,255,255,0.45)",
+                  fontSize: 28,
+                  color: "rgba(255,255,255,0.5)",
                   fontFamily: sansFamily,
                   fontWeight: 300,
                   letterSpacing: 2,
@@ -971,8 +971,8 @@ const RecruitScene: React.FC = () => {
         >
           <div
             style={{
-              fontSize: 18,
-              color: "rgba(255,255,255,0.4)",
+              fontSize: 26,
+              color: "rgba(255,255,255,0.5)",
               fontFamily: sansFamily,
               fontWeight: 300,
               letterSpacing: 2,
@@ -1013,7 +1013,7 @@ const ClosingScene: React.FC = () => {
         {/* Brand name */}
         <div
           style={{
-            fontSize: 22,
+            fontSize: 30,
             color: gold,
             fontFamily: sansFamily,
             fontWeight: 400,
@@ -1029,7 +1029,7 @@ const ClosingScene: React.FC = () => {
 
         <div
           style={{
-            fontSize: 60,
+            fontSize: 78,
             color: "#fff",
             fontFamily,
             fontWeight: 700,
@@ -1049,8 +1049,8 @@ const ClosingScene: React.FC = () => {
 
         <div
           style={{
-            fontSize: 22,
-            color: "rgba(255,255,255,0.5)",
+            fontSize: 30,
+            color: "rgba(255,255,255,0.6)",
             fontFamily: sansFamily,
             fontWeight: 300,
             letterSpacing: 6,
@@ -1085,7 +1085,7 @@ const ClosingScene: React.FC = () => {
         >
           <div
             style={{
-              fontSize: 30,
+              fontSize: 40,
               color: "#fff",
               fontFamily,
               fontWeight: 600,
@@ -1096,8 +1096,8 @@ const ClosingScene: React.FC = () => {
           </div>
           <div
             style={{
-              fontSize: 20,
-              color: "rgba(255,255,255,0.4)",
+              fontSize: 28,
+              color: "rgba(255,255,255,0.5)",
               fontFamily: sansFamily,
               fontWeight: 300,
               letterSpacing: 2,
@@ -1125,8 +1125,8 @@ const ClosingScene: React.FC = () => {
         >
           <div
             style={{
-              fontSize: 18,
-              color: "rgba(255,255,255,0.35)",
+              fontSize: 26,
+              color: "rgba(255,255,255,0.45)",
               fontFamily: sansFamily,
               fontWeight: 300,
               letterSpacing: 2,
