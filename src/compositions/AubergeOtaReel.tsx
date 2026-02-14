@@ -177,15 +177,15 @@ const CuisineSlide: React.FC = () => {
   );
 };
 
-// ─── Opening scene: Hotel Exterior with branding ────────
+// ─── Opening scene: Lounge with branding ─────────────────
 const OpeningScene: React.FC = () => {
   const frame = useCurrentFrame();
 
-  const fadeIn = interpolate(frame, [0, 20], [0, 1], {
+  const fadeIn = interpolate(frame, [0, 15], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  const fadeOut = interpolate(frame, [78, 90], [1, 0], {
+  const fadeOut = interpolate(frame, [63, 75], [1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
@@ -194,7 +194,7 @@ const OpeningScene: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: warmBrown }}>
       <div style={{ position: "absolute", inset: 0, opacity }}>
-        <KenBurns src="auberge/img34.jpg" move="zoomIn" speed={0.05} />
+        <KenBurns src="auberge/img38.jpg" move="panLeft" speed={0.05} />
       </div>
       <Overlay style="bottom" opacity={0.45} />
 
@@ -210,7 +210,7 @@ const OpeningScene: React.FC = () => {
           gap: 12,
         }}
       >
-        <FadeText frame={frame} delay={15} style={{
+        <FadeText frame={frame} delay={10} style={{
           fontSize: 26,
           color: warmGold,
           fontFamily: sansFont,
@@ -224,7 +224,7 @@ const OpeningScene: React.FC = () => {
         {/* Gold line */}
         <div
           style={{
-            width: interpolate(frame, [25, 50], [0, 100], {
+            width: interpolate(frame, [18, 38], [0, 100], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
             }),
@@ -233,7 +233,7 @@ const OpeningScene: React.FC = () => {
           }}
         />
 
-        <FadeText frame={frame} delay={30} style={{
+        <FadeText frame={frame} delay={22} style={{
           fontSize: 56,
           color: "#fff",
           fontFamily: serifFont,
@@ -327,69 +327,38 @@ const ClosingScene: React.FC = () => {
   );
 };
 
-// ─── Main Composition ─────────────────────────────────────
+// ─── Main Composition (450 frames / 15s) ─────────────────
 export const AubergeOtaReel: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: warmBrown }}>
       {/* BGM */}
       <Audio src={staticFile("auberge/bgm.mp3")} volume={0.3} />
 
-      {/* === HOTEL SECTION (~15s) === */}
-
-      {/* Scene 1: Hotel Exterior / Sign (0-90, 3s) */}
-      <Sequence from={0} durationInFrames={90}>
+      {/* Scene 1: Opening - Lounge + Hotel name (0-75, 2.5s) */}
+      <Sequence from={0} durationInFrames={75}>
         <OpeningScene />
       </Sequence>
 
-      {/* Scene 2: Hotel Front / Entrance (90-180, 3s) */}
-      <Sequence from={90} durationInFrames={90}>
-        <PhotoSlide
-          src="auberge/img35.jpg"
-          move="panRight"
-          durationFrames={90}
-        />
-      </Sequence>
-
-      {/* Scene 3: Courtyard / Garden (180-270, 3s) */}
-      <Sequence from={180} durationInFrames={90}>
+      {/* Scene 2: Bamboo Garden (75-135, 2s) */}
+      <Sequence from={75} durationInFrames={60}>
         <PhotoSlide
           src="auberge/img36.jpg"
           move="panUp"
-          durationFrames={90}
+          durationFrames={60}
         />
       </Sequence>
 
-      {/* Scene 4: Lounge (270-360, 3s) */}
-      <Sequence from={270} durationInFrames={90}>
-        <PhotoSlide
-          src="auberge/img38.jpg"
-          move="panLeft"
-          durationFrames={90}
-        />
-      </Sequence>
-
-      {/* Scene 5: Guest Room (360-450, 3s) */}
-      <Sequence from={360} durationInFrames={90}>
+      {/* Scene 3: Guest Room (135-195, 2s) */}
+      <Sequence from={135} durationInFrames={60}>
         <PhotoSlide
           src="auberge/img29.jpg"
-          move="zoomIn"
-          durationFrames={90}
-        />
-      </Sequence>
-
-      {/* === RESTAURANT SECTION (~6s) === */}
-
-      {/* Scene 6: Restaurant Red Sign (450-510, 2s) */}
-      <Sequence from={450} durationInFrames={60}>
-        <PhotoSlide
-          src="auberge/img17.jpg"
           move="zoomIn"
           durationFrames={60}
         />
       </Sequence>
 
-      {/* Scene 7: Restaurant Interior (510-570, 2s) */}
-      <Sequence from={510} durationInFrames={60}>
+      {/* Scene 4: Restaurant Interior (195-255, 2s) */}
+      <Sequence from={195} durationInFrames={60}>
         <PhotoSlide
           src="auberge/img18.jpg"
           move="panRight"
@@ -397,15 +366,13 @@ export const AubergeOtaReel: React.FC = () => {
         />
       </Sequence>
 
-      {/* Scene 8: Cuisine (570-630, 2s) */}
-      <Sequence from={570} durationInFrames={60}>
+      {/* Scene 5: Cuisine (255-315, 2s) */}
+      <Sequence from={255} durationInFrames={60}>
         <CuisineSlide />
       </Sequence>
 
-      {/* === TOURIST SECTION (~4s) === */}
-
-      {/* Scene 9: Nearby - Autumn scenery (630-690, 2s) */}
-      <Sequence from={630} durationInFrames={60}>
+      {/* Scene 6: Autumn scenery (315-375, 2s) */}
+      <Sequence from={315} durationInFrames={60}>
         <PhotoSlide
           src="auberge/img16.jpg"
           move="panLeft"
@@ -413,8 +380,8 @@ export const AubergeOtaReel: React.FC = () => {
         />
       </Sequence>
 
-      {/* Scene 10: Nearby - Autumn / Closing (690-750, 2s) */}
-      <Sequence from={690} durationInFrames={60}>
+      {/* Scene 7: Closing - Deer + Hotel name (375-450, 2.5s) */}
+      <Sequence from={375} durationInFrames={75}>
         <ClosingScene />
       </Sequence>
     </AbsoluteFill>
