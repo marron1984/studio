@@ -6,6 +6,7 @@ import { YakinikuArataReel } from "./compositions/YakinikuArataReel";
 import { AubergeRecruitReel } from "./compositions/AubergeRecruitReel";
 import { AubergeSceneryReel } from "./compositions/AubergeSceneryReel";
 import { AubergeOtaReel } from "./compositions/AubergeOtaReel";
+import { JapaneseLogotype } from "./compositions/JapaneseLogotype";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -54,6 +55,14 @@ export const RemotionRoot: React.FC = () => {
         id="AubergeOtaReel"
         component={AubergeOtaReel}
         durationInFrames={450}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="JapaneseLogotype"
+        component={JapaneseLogotype}
+        durationInFrames={180}
         fps={30}
         width={1080}
         height={1920}
