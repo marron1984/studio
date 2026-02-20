@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dhp creative os — mastermind sheet</title>
+<style>
+  :root {
+    --bg: #F4F2ED;
+    --bg-card: #FFFFFF;
+    --text: #1E2430;
+    --sub: #6B6B67;
+    --border: #CFC7BA;
+    --accent: #8C8070;
+    --greige-light: #E8E3DA;
+    --greige-mid: #D5CFC5;
+    --page-w: 297mm;
+    --page-h: 210mm;
+    --margin: 8mm;
+    --fs-title: 14pt;
+    --fs-section: 8pt;
+    --fs-heading: 7pt;
+    --fs-body: 6pt;
+    --fs-small: 5.4pt;
+    --fs-tiny: 4.8pt;
+    --gap: 2.5mm;
+    --radius: 1.2mm;
+  }
+  @page {
+    size: A4 landscape;
+    margin: 8mm;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: var(--page-w);
+    height: var(--page-h);
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", system-ui, -apple-system, sans-serif;
+    font-size: var(--fs-body);
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+  }
+  .page {
+    width: var(--page-w);
+    height: var(--page-h);
+    padding: var(--margin);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ── Header ── */
+  .header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 2.5mm;
+    border-bottom: 0.25mm solid var(--border);
+    margin-bottom: 2.5mm;
+    flex-shrink: 0;
+  }
+  .header-left { display: flex; align-items: baseline; gap: 4mm; }
+  .logo {
+    font-family: "Georgia", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-size: var(--fs-title);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .logo span { font-weight: 700; }
+  .header-sub {
+    font-size: var(--fs-small);
+    color: var(--sub);
+    letter-spacing: 0.1em;
+    text-transform: lowercase;
+    white-space: nowrap;
+  }
+  .header-statement {
+    font-size: var(--fs-tiny);
+    color: var(--sub);
+    font-style: italic;
+    text-align: right;
+    line-height: 1.6;
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "Georgia", serif;
+    flex-shrink: 1;
+  }
+
+  /* ── Main Grid ── */
+  .main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1.08fr 1fr;
+    gap: var(--gap);
+    min-height: 0;
+  }
+
+  /* ── Columns ── */
+  .col { display: flex; flex-direction: column; gap: var(--gap); min-height: 0; }
+
+  /* ── Cards ── */
+  .card {
+    background: var(--bg-card);
+    border: 0.18mm solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.5mm 2.8mm 2.2mm;
+    flex-shrink: 0;
+  }
+  .card-grow { flex: 1; min-height: 0; }
+  .card-label {
+    font-size: var(--fs-tiny);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+    margin-bottom: 1.2mm;
+    font-weight: 600;
+  }
+  .card-title {
+    font-family: "Georgia", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-size: var(--fs-section);
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 1.2mm;
+    line-height: 1.3;
+  }
+  .card p {
+    font-size: var(--fs-body);
+    color: var(--sub);
+    line-height: 1.5;
+  }
+  .card p strong { color: var(--text); font-weight: 600; }
+
+  /* ── Definition Card ── */
+  .definition-eq {
+    font-family: "Georgia", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-size: var(--fs-heading);
+    color: var(--text);
+    margin-bottom: 1mm;
+    font-weight: 600;
+  }
+
+  /* ── 4 Pillars ── */
+  .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8mm; }
+  .pillar {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.8mm;
+    padding: 1.8mm;
+    background: var(--bg);
+    border-radius: var(--radius);
+  }
+  .pillar-icon {
+    flex-shrink: 0;
+    width: 6.5mm;
+    height: 6.5mm;
+  }
+  .pillar-icon svg { width: 100%; height: 100%; }
+  .pillar h4 {
+    font-size: var(--fs-small);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.3mm;
+    letter-spacing: 0.02em;
+  }
+  .pillar p {
+    font-size: var(--fs-tiny);
+    color: var(--sub);
+    line-height: 1.4;
+  }
+
+  /* ── Phase Timeline ── */
+  .phases { display: flex; gap: 1.2mm; margin-top: 1mm; }
+  .phase {
+    flex: 1;
+    background: var(--bg);
+    border-radius: var(--radius);
+    padding: 1.8mm 2.2mm;
+    position: relative;
+  }
+  .phase::after {
+    content: "";
+    position: absolute;
+    right: -1mm;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 1.3mm solid transparent;
+    border-bottom: 1.3mm solid transparent;
+    border-left: 1mm solid var(--greige-mid);
+  }
+  .phase:last-child::after { display: none; }
+  .phase-num {
+    font-size: var(--fs-tiny);
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .phase-title {
+    font-size: var(--fs-small);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0.3mm 0;
+  }
+  .phase-period {
+    font-size: var(--fs-tiny);
+    color: var(--sub);
+  }
+  .phase-desc {
+    font-size: var(--fs-tiny);
+    color: var(--sub);
+    margin-top: 0.3mm;
+    line-height: 1.35;
+  }
+
+  /* ── Cadence ── */
+  .cadence-row {
+    display: flex;
+    gap: 1.2mm;
+    margin-top: 1.2mm;
+  }
+  .cadence-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1.5mm;
+    background: var(--bg);
+    border-radius: var(--radius);
+    padding: 1.5mm 1.8mm;
+  }
+  .cadence-item svg { flex-shrink: 0; }
+  .cadence-label {
+    font-size: var(--fs-tiny);
+    font-weight: 700;
+    color: var(--text);
+  }
+  .cadence-desc {
+    font-size: var(--fs-tiny);
+    color: var(--sub);
+    line-height: 1.3;
+  }
+
+  /* ── Operating ── */
+  .operating-flow {
+    display: flex;
+    align-items: center;
+    gap: 1mm;
+    margin: 1.2mm 0;
+  }
+  .flow-step {
+    background: var(--bg);
+    border-radius: var(--radius);
+    padding: 1mm 2mm;
+    font-size: var(--fs-tiny);
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .flow-arrow { color: var(--greige-mid); font-size: var(--fs-small); }
+  .roles { display: grid; grid-template-columns: 1fr 1fr; gap: 1mm; margin-top: 0.8mm; }
+  .role {
+    display: flex;
+    align-items: center;
+    gap: 1.2mm;
+    font-size: var(--fs-tiny);
+    color: var(--sub);
+  }
+  .role-dot {
+    width: 1.3mm;
+    height: 1.3mm;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  /* ── Governance ── */
+  .gov-list { list-style: none; margin-top: 0.8mm; }
+  .gov-list li {
+    font-size: var(--fs-tiny);
+    color: var(--sub);
+    padding: 0.6mm 0;
+    border-bottom: 0.12mm solid var(--greige-light);
+    display: flex;
+    align-items: center;
+    gap: 1.2mm;
+  }
+  .gov-list li:last-child { border-bottom: none; }
+  .gov-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.2mm;
+    height: 3.2mm;
+    border-radius: 50%;
+    background: var(--greige-light);
+    font-size: var(--fs-tiny);
+    font-weight: 700;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  /* ── KPI ── */
+  .kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2mm; margin-top: 0.8mm; }
+  .kpi-item {
+    background: var(--bg);
+    border-radius: var(--radius);
+    padding: 1.5mm 2mm;
+  }
+  .kpi-cat {
+    font-size: var(--fs-tiny);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.2mm;
+  }
+  .kpi-metrics {
+    font-size: var(--fs-tiny);
+    color: var(--sub);
+    line-height: 1.35;
+  }
+
+  /* ── Next Actions ── */
+  .next-card {
+    background: var(--greige-light);
+    border: 0.18mm solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.2mm 2.8mm;
+    flex-shrink: 0;
+  }
+  .next-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8mm 2.5mm;
+    margin-top: 1mm;
+  }
+  .next-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2mm;
+    font-size: var(--fs-tiny);
+    color: var(--text);
+  }
+  .next-check {
+    width: 2.2mm;
+    height: 2.2mm;
+    border: 0.22mm solid var(--accent);
+    border-radius: 0.3mm;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <!-- ━━ Header ━━ -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">dhp <span>creative os</span></div>
+      <div class="header-sub">dhp next mastermind sheet</div>
+    </div>
+    <div class="header-statement">
+      「dhp nextはdhpの未来。未来は思いつきではなく、運用osでつくる。」
+    </div>
+  </header>
+
+  <!-- ━━ Main 3-Column Grid ━━ -->
+  <div class="main">
+
+    <!-- ── Column 1: What + Value ── -->
+    <div class="col">
+
+      <!-- Definition -->
+      <div class="card">
+        <div class="card-label">What — 定義</div>
+        <div class="definition-eq">dhp creative os =</div>
+        <p>
+          dhpグループの<strong>マーケティング / プロモーション / SNS / PR・広報 / クリエイティブ</strong>を統合し、各拠点の成果（売上・採用・信頼）を最大化する<strong>運用OS</strong>。
+        </p>
+      </div>
+
+      <!-- 4 Pillars -->
+      <div class="card card-grow">
+        <div class="card-label">Value — 4つの柱</div>
+        <div class="pillars">
+          <!-- 1 brand system -->
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="24" height="24" rx="3" stroke="#8C8070" stroke-width="1.5"/>
+                <rect x="6" y="6" width="7" height="7" rx="1" fill="#CFC7BA"/>
+                <rect x="15" y="6" width="7" height="7" rx="1" fill="#CFC7BA"/>
+                <rect x="6" y="15" width="7" height="7" rx="1" fill="#CFC7BA"/>
+                <rect x="15" y="15" width="7" height="7" rx="1" fill="#E8E3DA"/>
+              </svg>
+            </div>
+            <div>
+              <h4>brand system</h4>
+              <p>世界観・トンマナ・資産管理・テンプレ統一</p>
+            </div>
+          </div>
+          <!-- 2 growth marketing -->
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="3,22 10,14 16,17 25,6" stroke="#8C8070" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="25" cy="6" r="2" fill="#CFC7BA" stroke="#8C8070" stroke-width="1"/>
+              </svg>
+            </div>
+            <div>
+              <h4>growth marketing</h4>
+              <p>年間計画・キャンペーン・導線改善・KPI運用</p>
+            </div>
+          </div>
+          <!-- 3 content studio -->
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="5" width="22" height="16" rx="2" stroke="#8C8070" stroke-width="1.5"/>
+                <circle cx="14" cy="13" r="4" stroke="#8C8070" stroke-width="1.2" fill="#E8E3DA"/>
+                <circle cx="14" cy="13" r="1.5" fill="#CFC7BA"/>
+              </svg>
+            </div>
+            <div>
+              <h4>content studio</h4>
+              <p>撮影・編集・SNS運用・代表/拠点発信</p>
+            </div>
+          </div>
+          <!-- 4 pr & reputation -->
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 4 L17 10 L24 11 L19 16 L20 23 L14 20 L8 23 L9 16 L4 11 L11 10 Z" stroke="#8C8070" stroke-width="1.3" fill="#E8E3DA" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h4>pr &amp; reputation</h4>
+              <p>リリース・メディア・危機管理・信頼構築</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Column 2: How (Phase + Cadence + Operating) ── -->
+    <div class="col">
+
+      <!-- Phase -->
+      <div class="card">
+        <div class="card-label">How — フェーズ</div>
+        <div class="phases">
+          <div class="phase">
+            <div class="phase-num">phase 0</div>
+            <div class="phase-title">特命チーム</div>
+            <div class="phase-period">0 – 3ヶ月</div>
+            <div class="phase-desc">成果検証・型づくり</div>
+          </div>
+          <div class="phase">
+            <div class="phase-num">phase 1</div>
+            <div class="phase-title">インハウス部門化</div>
+            <div class="phase-period">3 – 12ヶ月</div>
+            <div class="phase-desc">横展開・安定運用</div>
+          </div>
+          <div class="phase">
+            <div class="phase-num">phase 2</div>
+            <div class="phase-title">法人化</div>
+            <div class="phase-period">12ヶ月 +</div>
+            <div class="phase-desc">収益化・再現性・ガバナンス</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cadence -->
+      <div class="card">
+        <div class="card-label">Cadence — 運用リズム</div>
+        <div class="cadence-row">
+          <div class="cadence-item">
+            <svg width="7mm" height="7mm" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="13" stroke="#8C8070" stroke-width="1.3"/>
+              <path d="M16 16 L16 7" stroke="#1E2430" stroke-width="1.3" stroke-linecap="round"/>
+              <path d="M16 16 L22 16" stroke="#8C8070" stroke-width="1" stroke-linecap="round"/>
+              <text x="16" y="27" text-anchor="middle" font-size="5" fill="#8C8070" font-weight="700">M</text>
+            </svg>
+            <div>
+              <div class="cadence-label">月初</div>
+              <div class="cadence-desc">月間テーマ／撮影日／制作計画</div>
+            </div>
+          </div>
+          <div class="cadence-item">
+            <svg width="7mm" height="7mm" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="13" stroke="#8C8070" stroke-width="1.3"/>
+              <path d="M16 16 L16 9" stroke="#1E2430" stroke-width="1.3" stroke-linecap="round"/>
+              <path d="M16 16 L20 20" stroke="#8C8070" stroke-width="1" stroke-linecap="round"/>
+              <text x="16" y="27" text-anchor="middle" font-size="5" fill="#8C8070" font-weight="700">W</text>
+            </svg>
+            <div>
+              <div class="cadence-label">週次</div>
+              <div class="cadence-desc">WBR（数値レビュー→改善）</div>
+            </div>
+          </div>
+          <div class="cadence-item">
+            <svg width="7mm" height="7mm" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="13" stroke="#8C8070" stroke-width="1.3"/>
+              <path d="M16 16 L16 10" stroke="#1E2430" stroke-width="1.3" stroke-linecap="round"/>
+              <path d="M16 16 L12 20" stroke="#8C8070" stroke-width="1" stroke-linecap="round"/>
+              <text x="16" y="27" text-anchor="middle" font-size="5" fill="#8C8070" font-weight="700">D</text>
+            </svg>
+            <div>
+              <div class="cadence-label">日次</div>
+              <div class="cadence-desc">投稿運用／軽微改善</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Operating -->
+      <div class="card card-grow">
+        <div class="card-label">Operating — 拠点年間シート運用</div>
+        <div class="operating-flow">
+          <span class="flow-step">年間シート作成</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">月次/週次へ分解</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">撮影/投稿を定例化</span>
+        </div>
+        <div style="font-size:var(--fs-tiny); color:var(--accent); font-weight:600; margin:1.2mm 0 0.6mm;">必須アサイン（4役）</div>
+        <div class="roles">
+          <div class="role"><span class="role-dot"></span>年間シート責任者</div>
+          <div class="role"><span class="role-dot"></span>ブレイクダウン担当</div>
+          <div class="role"><span class="role-dot"></span>撮影立会い</div>
+          <div class="role"><span class="role-dot"></span>数値共有（KPI）</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Column 3: Governance + KPI + Next ── -->
+    <div class="col">
+
+      <!-- Governance -->
+      <div class="card">
+        <div class="card-label">Governance — 5つの憲法</div>
+        <ul class="gov-list">
+          <li><span class="gov-num">1</span>優先順位基準を明確化</li>
+          <li><span class="gov-num">2</span>最終承認者は1名</li>
+          <li><span class="gov-num">3</span>依頼窓口を一本化</li>
+          <li><span class="gov-num">4</span>素材/テンプレを一元管理</li>
+          <li><span class="gov-num">5</span>週次WBRを固定曜日で実施</li>
+        </ul>
+      </div>
+
+      <!-- KPI -->
+      <div class="card">
+        <div class="card-label">KPI — 成果指標</div>
+        <div class="kpi-grid">
+          <div class="kpi-item">
+            <div class="kpi-cat">売上</div>
+            <div class="kpi-metrics">予約数 / CPA / ROAS</div>
+          </div>
+          <div class="kpi-item">
+            <div class="kpi-cat">採用</div>
+            <div class="kpi-metrics">応募数 / 面談率 / 採用単価</div>
+          </div>
+          <div class="kpi-item">
+            <div class="kpi-cat">広報</div>
+            <div class="kpi-metrics">掲載数 / 指名検索 / 保存率</div>
+          </div>
+          <div class="kpi-item">
+            <div class="kpi-cat">ブランド</div>
+            <div class="kpi-metrics">レビュー評価 / NPS</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Next 30 Days -->
+      <div class="next-card" style="margin-top:auto;">
+        <div class="card-label">Next 30 Days</div>
+        <div class="card-title" style="font-size:var(--fs-heading);">最初の一歩</div>
+        <div class="next-items">
+          <div class="next-item"><span class="next-check"></span>パイロット拠点2つ決定</div>
+          <div class="next-item"><span class="next-check"></span>年間シート v0.1 完成</div>
+          <div class="next-item"><span class="next-check"></span>月次撮影日を固定</div>
+          <div class="next-item"><span class="next-check"></span>WBR開始（KPIボード運用）</div>
+          <div class="next-item"><span class="next-check"></span>トンマナ/テンプレ配布</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
