@@ -1,26 +1,26 @@
 {
-  "name": "studio",
+  "name": "shozui-management-os",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "start": "npx remotion studio src/index.ts",
-    "build": "npx remotion render src/index.ts RestaurantMenuReel out/restaurant-menu-reel.mp4",
-    "render": "npx remotion render src/index.ts RestaurantMenuReel out/restaurant-menu-reel.mp4"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "http://local_proxy@127.0.0.1:19300/git/marron1984/studio"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@remotion/cli": "^4.0.421",
-    "@remotion/google-fonts": "^4.0.421",
-    "@remotion/transitions": "^4.0.421",
-    "@types/react": "^19.2.14",
-    "remotion": "^4.0.421",
-    "typescript": "^5.9.3"
+    "next": "^14.2.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "lucide-react": "^0.468.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
   }
 }

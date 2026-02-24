@@ -1,3 +1,8 @@
 node_modules/
 dist/
+.next/
+out/
 *.webm
+.env
+.env.local
+.env.production.local
